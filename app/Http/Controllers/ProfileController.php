@@ -9,7 +9,7 @@ class ProfileController extends Controller
 {
     public function getAllUsers()
     {
-        $users = User::with('profile')->get();
-        return view('users', compact('users'));
+        $profiles = User::with('profile')->get();
+        return view('users', compact('profiles'));
     }
 }

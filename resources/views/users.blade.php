@@ -6,12 +6,14 @@
     <title>USERS PROFILES</title>
 </head>
 <body>
-    <h1>USERS</h1>
+    <h1>ALL USERS</h1>
 
-    @foreach ($users as $user)
-        <div>Name: {{$user->name}}</div>
-        <div>Email: {{$user->email}}</div>
-        <br>
+    @foreach ($profiles as $profile)
+        <div>Name: {{$profile->user->name}}</div>
+        <div>Email: {{$profile->user->email}}</div>
+        <div>Bio: {{$profile->bio}}</div>
+        <div>School: {{$profile->school}}</div>
+        <hr>
     @endforeach
     
 </body>
